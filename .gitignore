@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ignoring the file from getting exposed, since this project will be upload on a public 
+# github repository.
+.env
+
