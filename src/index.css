@@ -1,0 +1,85 @@
+/* Global reset + design tokens.
+   Grayscale tokens sourced from project-structure/css/palette (2).scss;
+   accent/alert are added since that palette is neutral-only. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+:root {
+  /* Palette (project-structure/css/palette (2).scss) */
+  --platinum: #f3f4f6ff;
+  --alabaster-grey: #dee2e6ff;
+  --iron-grey: #495057ff;
+  --carbon-black: #212529ff;
+
+  /* Semantic tokens — light theme (default) */
+  --color-bg: var(--platinum);
+  --color-bg-rgb: 243 244 246;
+  --color-surface: #ffffff;
+  --color-text: var(--carbon-black);
+  --color-text-muted: var(--iron-grey);
+  --color-border: var(--alabaster-grey);
+  --color-accent: #1f4e79;
+  --color-accent-contrast: #ffffff;
+  --color-alert: #c0392b;
+  --color-alert-bg: #fdecea;
+
+  --font-heading: "Orbitron", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+
+  --content-width: clamp(320px, 92vw, 1100px);
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0f1420;
+  --color-bg-rgb: 15 20 32;
+  --color-surface: #171e2c;
+  --color-text: #f5f5fb;
+  --color-text-muted: #a9b0c3;
+  --color-border: #2a3245;
+  --color-accent: #6fa8dc;
+  --color-accent-contrast: #0f1420;
+  --color-alert: #ff6b5b;
+  --color-alert-bg: #3a1f1c;
+
+  color-scheme: dark;
+}

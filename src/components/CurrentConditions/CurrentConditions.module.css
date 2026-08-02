@@ -1,0 +1,120 @@
+.conditions {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.locationName {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+}
+
+.updatedAt {
+  margin: 0.25rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.conditionIcon {
+  width: 64px;
+  height: 64px;
+}
+
+.tempRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.temperature {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.conditionText {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+.statsGrid {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.stat dt {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.stat dd {
+  margin: 0.25rem 0 0;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.statIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-accent);
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .temperature {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .conditions {
+    padding: 1rem;
+  }
+
+  .temperature {
+    font-size: 1.875rem;
+  }
+
+  .conditionIcon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  .conditions {
+    padding: 2rem;
+  }
+
+  .statsGrid {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .temperature {
+    font-size: 3.5rem;
+  }
+}
