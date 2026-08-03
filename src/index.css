@@ -48,7 +48,8 @@ a {
   /* Semantic tokens — light theme (default) */
   --color-bg: var(--platinum);
   --color-bg-rgb: 243 244 246;
-  --color-surface: #ffffff;
+  --color-surface: #ffffff66;
+  --color-surface-search-results: #ffffffee;
   --color-text: var(--carbon-black);
   --color-text-muted: var(--iron-grey);
   --color-border: var(--alabaster-grey);
@@ -58,7 +59,7 @@ a {
   --color-alert-bg: #fdecea;
 
   --font-heading: "Orbitron", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-body: "Orbitron", system-ui, -apple-system, sans-serif;
 
   --radius-lg: 20px;
   --radius-md: 14px;
@@ -72,11 +73,12 @@ a {
 [data-theme="dark"] {
   --color-bg: #0f1420;
   --color-bg-rgb: 15 20 32;
-  --color-surface: #171e2c;
-  --color-text: #f5f5fb;
+  --color-surface: #171e2c66;
+  --color-surface-search-results: #171e2cee;
+  --color-text: #fff;
   --color-text-muted: #a9b0c3;
   --color-border: #2a3245;
-  --color-accent: #6fa8dc;
+  --color-accent: #fff;
   --color-accent-contrast: #0f1420;
   --color-alert: #ff6b5b;
   --color-alert-bg: #3a1f1c;
