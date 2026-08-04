@@ -13,6 +13,7 @@ import { coordsToQueryValue } from "../../services/weatherApi";
 import { isHighSeverity } from "../../utils/weatherAlerts";
 import styles from "./Home.module.css";
 import type { SavedLocation } from "../../types/location";
+import emptyStateImage from "../../assets/images/Weather-empty-state-image.jpg";
 
 // Location state (locations/addLocation/etc.) and the status-message toast
 // are owned by App, not Home, so the Navbar's search bar can also add/switch
@@ -112,7 +113,16 @@ function Home({
         onRemove={onRemoveLocation}
       />
 
-      {geoError && locations.length === 0 && <MutedText>{geoError} Try searching for a city instead.</MutedText>}
+      {geoError && locations.length === 0 && (
+        <div className={styles.emptyState}>
+          <MutedText>{geoError} Try searching for a city instead.</MutedText>
+          <img
+            src={emptyStateImage}
+            alt="Location permission was denied. Try searching for a city instead."
+            className={styles.emptyStateImage}
+          />
+        </div>
+      )}
 
       {!activeLocation && !isLoading && locations.length === 0 && !geoError && (
         <MutedText>Detecting your location…</MutedText>

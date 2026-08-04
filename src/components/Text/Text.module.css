@@ -25,7 +25,7 @@
 .mutedText {
   margin: 0;
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.985rem;
   line-height: 1.4;
   color: var(--color-text-muted);
 }
