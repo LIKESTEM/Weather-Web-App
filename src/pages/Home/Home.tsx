@@ -115,12 +115,14 @@ function Home({
 
       {geoError && locations.length === 0 && (
         <div className={styles.emptyState}>
-          <MutedText>{geoError} Try searching for a city instead.</MutedText>
           <img
             src={emptyStateImage}
             alt="Location permission was denied. Try searching for a city instead."
             className={styles.emptyStateImage}
           />
+          <MutedText className={styles.mutedTextFromSearch}>
+            {geoError} Try searching for a city instead.
+          </MutedText>
         </div>
       )}
 

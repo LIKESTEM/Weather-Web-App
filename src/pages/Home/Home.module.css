@@ -20,16 +20,34 @@
   gap: 0.75rem;
   text-align: center;
   padding: 1rem 0;
-  /* border-radius: 1.5rem; */
+  border-radius: 1.5rem;
+  position: relative; 
 }
-
 
 .emptyStateImage {
   max-width: 520px;
   width: 100%;
   height: auto;
   border-radius: 1.5rem;
-  border: none;
+  opacity: 0.5;
+}
+
+.mutedTextFromSearch {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  
+
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  color: #e83636;
+  padding: 0 1rem 2.5rem;
 }
 
 .toastHost {
