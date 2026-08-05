@@ -13,7 +13,7 @@ import type {
 
 import type { SearchResult } from "../types/location";
 
-const BASE_URL = "https://api.weatherapi.com/v1";
+const BASE_URL = import.meta.env.BASE_URL_FROM_WEATHERAPI || "https://api.weatherapi.com/v1" as string | undefined;
 const API_KEY = import.meta.env.VITE_WEATHERAPI_KEY as string | undefined;
 
 export class WeatherApiError extends Error {
